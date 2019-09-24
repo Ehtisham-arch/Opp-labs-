@@ -1,35 +1,22 @@
+import java.util.*;
 class Task2{
 	public static void main(String args[]){
-		int a=5,b=6;
-		boolean c,d=true,e=false;
-		//Relational Operator:
-		System.out.println("Relational Operators:");
-		System.out.println();
-		c=a>b;
-		System.out.println(c);
-		c=a<b;
-		System.out.println(c);
-		c=a>=b;
-		System.out.println(c);
-		c=a<=b;
-		System.out.println(c);
-		c=a==b;
-		System.out.println(c);
-		c=a!=b;
-		System.out.println(c);
-		System.out.println();
-		System.out.println("Logical Boolean Operators:");
-		//Logical Boolean Operator:
-		System.out.println();
-		c=d&e;
-		System.out.println(c);
-		c=d|e;
-		System.out.println(c);
-		c=!d;
-		System.out.println(c);
-		c=!e;
-		System.out.println(c);
-		c=d^e;
-		System.out.println(c);
+		Scanner scanf=new Scanner(System.in);
+		int total=0;
+		System.out.println("Enter No: of Unit Consumed:");
+		int units=scanf.nextInt();
+		for(int i=1;i<=units;i++){
+			if(i<=50)
+				total+=10;
+			else if(i>50 && i<=100)
+				total+=15;
+			else if(i>100 && i<=200)
+				total+=20;
+			else if(i>200 && i<=300)
+				total+=25;
+			else if(i>300)
+				total+=30;
+		}
+		System.out.println("Total Bill for "+units+" is "+total);
 	}
 }
